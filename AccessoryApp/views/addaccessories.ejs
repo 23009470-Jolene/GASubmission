@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Classic Charm Co.</title>
+    <style>
+        body {
+            background-color: rgb(225, 188, 218);
+        }
+      </style>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container mt-3">
+        <h2>Add Accessory</h2>
+
+        <div class="text-center">
+            <form action="/addaccessories" method="POST" enctype="multipart/form-data">
+                <label for="name">Accessory Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="0" step="1"required><br><br>
+
+                <label for="price">Price:</label><br>
+                <input type="number" id="price" name="price" min="0" step="0.01" required><br><br>
+
+                <label for="image">Image:</label><br>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+                <button type="submit">Add Accessory</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

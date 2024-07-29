@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Charm Co.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(225, 188, 218);
+        }
+        .btn-light a {
+            color: inherit; /* Make link color inherit button color */
+            text-decoration: none; /* Remove underline */
+        }
+    </style>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+    <h2>Check Out</h2>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">What items do you want to purchase:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Item name">
+    </div>
+    <h2>Your Information</h2>
+    <div class="row g-3">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        </div>
+    </div> <br>
+    <h2>Shipping Address</h2>
+    <form class="row g-3">
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address:</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+    </form> <br>
+    <h2>Credit Card Information</h2>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Card Number:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+
+        <label for="formGroupExampleInput" class="form-label">Expiry Date:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+
+        <label for="formGroupExampleInput" class="form-label">CVV:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="CVV">
+    </div>
+    <button type="button" class="btn btn-light"><a href="/">Make Payment</a></button>
+</body>
+</html>
